@@ -1,0 +1,8 @@
+1. INstall laravel 9
+2. Create database and run migration command (php artisan migrate) to create default tables including users table.
+3. Install Breeze package ( learn in laravel documentation)
+4. crate folders and files acc. to your need
+5. Add pages and css jss etc. folders in respective folders
+6. Breeze package is there but we build our custom auth system (login/registration), makes our login and registration page as our default template.
+7. created routes of login and register page with prefix and group
+8. created vendors  and admins table by migration and models of the same.
