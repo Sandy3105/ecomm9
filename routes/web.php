@@ -33,8 +33,13 @@ Route::prefix('/admin')->group(function(){
     // Admin dashboard route 
     Route::match(['get', 'post'],'/login', [AdminController::class, 'login']);
 
-    // Admin dashboard route 
-    Route::get('/dashboard', [AdminController::class, 'dashboard']);
+    Route::group(['middleware'=>['admin']], function(){
+
+        // Admin dashboard route 
+        Route::get('/dashboard', [AdminController::class, 'dashboard']);
+        
+    });
+    
 
 });
 
