@@ -40,6 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        // Custom added admin guard
         'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
@@ -68,6 +69,7 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        // Custom added admin provider
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,

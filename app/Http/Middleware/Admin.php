@@ -17,9 +17,11 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
+        //Custom admin guard
         if(!Auth::guard('admin')->check()){
             return redirect('/admin/login');
         }
+
         return $next($request);
     }
 }

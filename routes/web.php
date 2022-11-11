@@ -38,6 +38,8 @@ Route::prefix('/admin')->group(function(){
         // Admin dashboard route 
         Route::get('/dashboard', [AdminController::class, 'dashboard']);
         
+        // Logout route
+        Route::get('/logout', [AdminController::class, 'logout']);
     });
     
 
