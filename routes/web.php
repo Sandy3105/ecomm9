@@ -37,6 +37,15 @@ Route::prefix('/admin')->group(function(){
 
         // Admin dashboard route 
         Route::get('/dashboard', [AdminController::class, 'dashboard']);
+
+        // Update Admin password 
+        Route::match(['get','post'],'/update-admin-password',[AdminController::class,'updateAdminPassword']);
+
+        // Update Admin details 
+        Route::match(['get','post'],'/update-admin-details',[AdminController::class,'updateAdminDetails']);
+
+        // Check Admin password 
+        Route::post('/check-admin-password',[AdminController::class,'checkAdminPassword']);
         
         // Logout route
         Route::get('/logout', [AdminController::class, 'logout']);
